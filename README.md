@@ -109,9 +109,9 @@ Esse projeto foi feito como aprendizado, mas se quiser sugerir melhorias ou só 
 
 ## 📬 Contato
 
-📧 [jose.nelson@exemplo.com](mailto:jose.nelson@exemplo.com)
-💼 [LinkedIn](https://linkedin.com/in/seu-perfil)
-📸 [Instagram Dev](https://instagram.com/seuinsta)
+📧 [jose.business.rodrigues@gmail.com](mailto:jose.business.rodrigues@gmail.com)
+💼 [LinkedIn](https://www.linkedin.com/in/jose-honorato/)
+📸 [Instagram Dev](https://instagram.com/josenelson.png)
 
 ---
 
