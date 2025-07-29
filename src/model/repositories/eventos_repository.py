@@ -15,10 +15,10 @@ class EventosRepository(EventosRepositoryInterface):
             
     def select_event(self, event_name: str) -> Eventos:
         with DBconnectionhandler() as db:
-            data = {
+            data = (
                 db.session
                 .query(Eventos)
                 .filter(Eventos.nome == event_name)
                 .one_or_none()
-            }
+            )
             return data
