@@ -1,0 +1,21 @@
+import pytest
+from .subscribers_repository import SubscribersRepository
+
+@pytest.mark.skip("Insert in DB")
+def test_insert():
+    subscriber_info = {
+        "name" : "meuNome",
+        "email" : "meuEmail",
+        "evento_id" : 2
+    }
+    subs_repo = SubscribersRepository()
+    subs_repo.insert(subscriber_info)
+
+@pytest.mark.skip("Select in DB")
+def test_select_subscriber():
+    email = "meuEmail"
+    event_id = 2
+
+    subs_repo = SubscribersRepository()
+    resp = subs_repo.select_subscriber(email, event_id)
+    print(resp.nome)

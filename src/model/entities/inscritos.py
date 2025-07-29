@@ -1,7 +1,8 @@
 from src.model.configs.base import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
+from .eventos import Eventos
 
-class inscritos(Base):
+class Inscritos(Base):
     __tablename__ = 'Inscritos'
     
     id = Column(Integer, primary_key=True, autoincrement=True)

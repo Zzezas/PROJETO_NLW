@@ -20,3 +20,4 @@ class EventosRepository:
                 .filter(Eventos.nome == event_name)
                 .one_or_none()
             }
+            return data
