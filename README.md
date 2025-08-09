@@ -1,137 +1,93 @@
-Sistema de Inscrição de Eventos com Links de Indicação (API Backend)
+📋 Event Registration Backend
 <p align="center">
 <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python" alt="Python 3.9+">
 <img src="https://img.shields.io/badge/Flask-2.2%2B-green?style=for-the-badge&logo=flask" alt="Flask">
 <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge" alt="Status: Em Desenvolvimento">
 </p>
 
-📖 Sobre o Projeto
-Este é o repositório do backend de um Sistema de Inscrição de Eventos. O principal objetivo deste projeto é fornecer uma API robusta e funcional para gerenciar inscrições de participantes em eventos, com um diferencial: um sistema de links de indicação.
+Um sistema backend completo em Python para gerenciar inscrições de pessoas em eventos, com links de indicação, pronto para ser integrado a um futuro front-end.
 
-Este projeto foi desenvolvido como parte do meu portfólio pessoal para demonstrar minhas habilidades em desenvolvimento backend com Python e Flask, criação de APIs RESTful e integração com banco de dados.
+🚀 Sobre o projeto
+Este projeto foi desenvolvido como um exemplo prático para meu portfólio.
+A aplicação é responsável por:
 
-O próximo passo é a construção de uma interface front-end para consumir esta API, criando uma experiência de usuário completa e visualmente agradável.
+Criar rotas com Flask para gerenciar eventos e inscrições.
 
-✨ Funcionalidades Principais
-Criação de Eventos: Endpoints para cadastrar novos eventos no sistema.
+Receber e enviar dados via API (testada no Postman).
 
-Inscrição de Pessoas: Permite que usuários se inscrevam em um evento específico.
+Armazenar informações no banco de dados, manipulado pelo DBeaver.
 
-Geração de Links de Indicação: Cada pessoa inscrita recebe um link único para indicar novos participantes.
+Suportar links de indicação para cada inscrição.
 
-Listagem e Detalhamento: Rotas para listar todos os eventos, buscar um evento específico e ver os participantes inscritos.
+Servir como base para integração futura com um site completo.
 
-Validações: O sistema valida os dados recebidos para garantir a integridade das informações.
+O próximo passo será criar um front-end bonito e responsivo para exibir tudo em tempo real.
 
-🛠️ Tecnologias Utilizadas
-Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
+✨ Funcionalidades
+📌 Cadastro de eventos
 
-Python: Linguagem de programação principal do projeto.
+📝 Inscrição de participantes
 
-Flask: Micro-framework web para a criação da API, gerenciamento de rotas e do servidor.
+🔗 Geração de links de indicação únicos
 
-Postman: Ferramenta utilizada para testar e documentar os endpoints da API durante o desenvolvimento.
+📊 Listagem e consulta de dados
 
-DBeaver: Cliente de banco de dados universal, utilizado para gerenciar e visualizar os dados do projeto.
+🗄️ Integração com banco de dados
 
-Banco de Dados (Ex: SQLite, PostgreSQL): [Descreva aqui o banco de dados que você usou, por exemplo: "SQLite para simplicidade em desenvolvimento"].
+🛠 Tecnologias utilizadas
+Python 3
 
-🚀 Como Executar o Projeto
-Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
+Flask
 
-Pré-requisitos
-Python 3.9 ou superior
+Postman (para testes de API)
 
-pip (gerenciador de pacotes do Python)
+DBeaver (para gerenciamento do banco)
 
-Instalação
-Clone o repositório:
+SQLite / PostgreSQL (dependendo do ambiente)
 
-Bash
+📦 Como executar
+Clone o repositório
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-Crie e ative um ambiente virtual:
+bash
+Copiar
+Editar
+git clone https://github.com/seuusuario/nome-do-repositorio.git
+Acesse a pasta
 
-Bash
+bash
+Copiar
+Editar
+cd nome-do-repositorio
+Crie um ambiente virtual
 
-# Para Windows
+bash
+Copiar
+Editar
 python -m venv venv
-.\venv\Scripts\activate
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+Instale as dependências
 
-# Para macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
-Instale as dependências:
-
-Bash
-
+bash
+Copiar
+Editar
 pip install -r requirements.txt
-(Nota: Certifique-se de ter um arquivo requirements.txt com todas as bibliotecas, como o Flask. Para criá-lo, use o comando pip freeze > requirements.txt)
+Execute o servidor
 
-Executando o Servidor
-Com as dependências instaladas, inicie o servidor Flask:
+bash
+Copiar
+Editar
+python app.py
+Teste no Postman usando http://localhost:5000/
 
-Bash
+📌 Próximos passos
+Criar interface web para inscrições (front-end com HTML, CSS, JavaScript e frameworks modernos).
 
-flask run
-O servidor estará rodando em http://127.0.0.1:5000.
+Melhorar autenticação e segurança.
 
-🔌 Como Usar a API
-Você pode usar o Postman ou outra ferramenta de sua preferência para interagir com a API.
+Implementar estatísticas e relatórios.
 
-Exemplos de Endpoints
-1. Inscrever uma pessoa em um evento
-Método: POST
+📄 Licença
+Este projeto está sob a licença MIT. Sinta-se livre para usar e modificar.
 
-URL: http://127.0.0.1:5000/inscricao
-
-Corpo da Requisição (JSON):
-
-JSON
-
-{
-    "nome_pessoa": "João da Silva",
-    "email": "joao.silva@example.com",
-    "id_evento": 1
-}
-Resposta de Sucesso (201 Created):
-
-JSON
-
-{
-    "mensagem": "Inscrição realizada com sucesso!",
-    "link_indicacao": "http://127.0.0.1:5000/indicacao/abcdef123"
-}
-2. Listar todos os eventos
-Método: GET
-
-URL: http://127.0.0.1:5000/eventos
-
-🔮 Próximos Passos (Roadmap)
-[ ] Desenvolvimento do Front-end: Criar uma interface web bonita e responsiva (provavelmente com React, Vue ou Angular) para consumir esta API.
-
-[ ] Sistema de Autenticação: Implementar autenticação de usuários (JWT - JSON Web Tokens) para proteger rotas.
-
-[ ] Contagem de Indicações: Desenvolver a lógica para contabilizar quantas pessoas se inscreveram através de cada link de indicação.
-
-[ ] Testes Automatizados: Escrever testes unitários e de integração para garantir a qualidade e estabilidade do código.
-
-[ ] Deploy: Publicar a aplicação em um serviço de nuvem como Heroku, Vercel ou AWS.
-
-👨‍💻 Autor
-Feito com ❤️ por [Seu Nome]
-
-LinkedIn: https://www.linkedin.com/in/seu-linkedin/
-
-GitHub: https://github.com/seu-usuario/
-
-✅ Automatizar envio de convites por e-mail
-
-✅ Front-end
-
-📌 Feito com dedicação e Python puro 🐍.
-
-
-
-
+💡 Este projeto faz parte do meu portfólio de desenvolvimento. Feedbacks são bem-vindos! 🚀
